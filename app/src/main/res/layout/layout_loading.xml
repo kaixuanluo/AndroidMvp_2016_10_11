@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.admin.androidmvp_2016_10_11.view.LoadingLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    skin:enable= "true">
+
+    <com.example.admin.androidmvp_2016_10_11.view.FixedFlipper
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/flp"
+        android:layout_gravity="center"
+        skin:enable= "true">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/load_transparent_ll"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:background="@color/cardview_dark_background"
+            skin:enable= "true">
+            <com.example.admin.androidmvp_2016_10_11.utils.colorUi.widget.ColorTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="这里是内容"
+                 />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/load_error_ll"
+            android:gravity="center"
+            android:layout_gravity="center"
+            skin:enable= "true">
+
+            <com.example.admin.androidmvp_2016_10_11.utils.colorUi.widget.ColorTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="加载失败"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/load_empty_ll"
+            android:gravity="center"
+            android:layout_gravity="center" >
+
+            <com.example.admin.androidmvp_2016_10_11.utils.colorUi.widget.ColorTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="获取数据为空"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/loading"
+            android:gravity="center"
+            android:layout_gravity="center" >
+
+            <com.example.admin.androidmvp_2016_10_11.utils.colorUi.widget.ColorTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正在加载"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:src="@drawable/frame_animation"
+                android:id="@+id/load_ing_iv"/>
+        </LinearLayout>
+
+    </com.example.admin.androidmvp_2016_10_11.view.FixedFlipper>
+
+</com.example.admin.androidmvp_2016_10_11.view.LoadingLayout>

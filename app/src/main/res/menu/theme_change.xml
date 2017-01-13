@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <group>
+    <item
+        android:id="@+id/theme_1"
+        android:orderInCategory="100"
+        android:title="设置 1"
+         />
+        <item
+            android:id="@+id/theme_2"
+            android:orderInCategory="100"
+            android:title="设置 2"
+             />
+        <item
+            android:id="@+id/theme_3"
+            android:orderInCategory="100"
+            android:title="设置 3"
+             />
+        <item
+            android:id="@+id/theme_4"
+            android:orderInCategory="100"
+            android:title="设置 4"
+             />
+        <item
+            android:id="@+id/theme_5"
+            android:orderInCategory="100"
+            android:title="设置 5"
+             />
+        <item
+            android:id="@+id/theme_6"
+            android:orderInCategory="100"
+            android:title="设置 6"
+             />
+        <item
+            android:id="@+id/theme_7"
+            android:orderInCategory="100"
+            android:title="设置 7"
+             />
+
+        <item
+            android:id="@+id/theme_8"
+            android:orderInCategory="100"
+            android:title="设置 8"
+            />
+
+    </group>
+</menu>

@@ -1,0 +1,106 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="mainBgColor">#C8E6C9</item>
+        <item name="mainColor">#4CAF50</item>
+        <item name="textColor">#C8E6C9</item>
+        <item name="android:buttonStyle">@style/Widget.AppCompat.Button</item>
+        <!--<item name="android:colorBackground">#4CAF50</item>-->
+    </style>
+
+    <style name="AppBackTheme"  parent="@style/AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="AppTheme.Base" parent="AppBackTheme"></style>
+
+    <style name="AppTheme.Base.Default" parent="AppTheme.Base">
+        <!--<item name="android:windowDrawsSystemBarBackgrounds" tools:targetApi="lollipop">true</item>-->
+    </style>
+
+    <!--app:cardCornerRadius="4dp"-->
+    <!--app:cardElevation="4dp"-->
+    <!--app:cardUseCompatPadding="true"-->
+    <!--app:cardPreventCornerOverlap="false"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+
+    <style name="CardView.Base">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="AppTheme.Base.Red">
+        <item name="colorPrimary">#AF504C</item>
+        <item name="colorPrimaryDark">#8E3C38</item>
+        <item name="colorAccent">#9E9E9E</item>
+        <item name="mainBgColor">#C8E6C9</item>
+        <item name="mainColor">#4CAF50</item>
+        <item name="textColor">#C9C8E6</item>
+        <!--<item name="android:colorBackground">#4CAF50</item>-->
+    </style>
+
+    <style name="AppTheme.Base.Green">
+        <item name="colorPrimary">#4CAF50</item>
+        <item name="colorPrimaryDark">#388E3C</item>
+        <item name="colorAccent">#9E9E9E</item>
+        <item name="mainBgColor">#C8E6C9</item>
+        <item name="mainColor">#4CAF50</item>
+        <item name="textColor">#C8E6C9</item>
+        <!--<item name="android:colorBackground">#4CAF50</item>-->
+    </style>
+
+    <style name="AppTheme.Base.Blue">
+        <item name="colorPrimary">#2196F3</item>
+        <item name="colorPrimaryDark">#1976D2</item>
+        <item name="colorAccent">#607D8B</item>
+        <item name="mainBgColor">#BBDEFB</item>
+        <item name="mainColor">#2196F3</item>
+        <item name="textColor">#BBDEFB</item>
+        <!--<item name="android:colorBackground">#2196F3</item>-->
+    </style>
+
+    <style name="AppTheme.Base.Purple">
+        <item name="colorPrimary">#673AB7</item>
+        <item name="colorPrimaryDark">#512DA8</item>
+        <item name="colorAccent">#795548</item>
+        <item name="mainBgColor">#D1C4E9</item>
+        <item name="mainColor">#673AB7</item>
+        <item name="textColor">#D1C4E9</item>
+        <!--<item name="android:colorBackground">#673AB7</item>-->
+    </style>
+
+    <style name="AppTheme.Base.Grey">
+        <item name="colorPrimary">#607D8B</item>
+        <item name="colorPrimaryDark">#455A64</item>
+        <item name="colorAccent">#FFC107</item>
+        <item name="mainBgColor">#CFD8DC</item>
+        <item name="mainColor">#607D8B</item>
+        <item name="textColor">#CFD8DC</item>
+        <!--<item name="android:colorBackground">#607D8B</item>-->
+    </style>
+
+
+    <style name="bg_color_default">
+        <item name="android:color">?attr/main_bg</item>
+    </style>
+
+    <style name="text_color_default">
+        <item name="textColor">?attr/text_color</item>
+    </style>
+
+    <style name="text_default" parent="text_color_default">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="text_default_with_padding" parent="text_default">
+        <item name="android:padding">@dimen/padding_default</item>
+    </style>
+
+</resources>

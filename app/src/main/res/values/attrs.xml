@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="main_bg" format="reference|color"/>
+    <attr name="text_color" format="reference|color"/>
+    <attr name="textColor" format="reference|color"/>
+    <attr name="button_color" format="reference|color"/>
+    <attr name="mainBgColor" format="reference|color"/>
+    <attr name="mainColor" format="reference|color"/>
+    <!--<attr name="theme2_second_bg" format="reference|color"/>-->
+    <!--<attr name="theme2_text_color" format="reference|color"/>-->
+</resources>

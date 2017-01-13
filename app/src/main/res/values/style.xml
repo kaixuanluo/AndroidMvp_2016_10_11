@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="theme_1">
+        <item name="main_bg">@color/theme1_main_bg</item>
+        <item name="text_color">@color/theme1_text_color</item>
+    </style>
+
+    <style name="theme_2">
+        <item name="main_bg">@color/theme2_main_bg</item>
+        <item name="text_color">@color/theme2_text_color</item>
+    </style>
+
+</resources>

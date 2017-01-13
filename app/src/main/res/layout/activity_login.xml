@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:id="@+id/login_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Button
+        android:id="@+id/login_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="登录" />
+
+    <Button
+        android:id="@+id/login_mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="邮件" />
+
+    <Button
+        android:id="@+id/login_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="进度" />
+
+    <Button
+        android:id="@+id/login_flow_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="流程列表" />
+
+    <Button
+        android:id="@+id/login_fly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="fly1" />
+
+    <Button
+        android:id="@+id/login_fly2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="fly2" />
+
+    <Button
+        android:id="@+id/login_fly3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="fly3" />
+
+    <Button
+        android:id="@+id/login_fly5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="fly5" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="download"
+        android:id="@+id/main_download_bt"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="upload"
+        android:id="@+id/main_upload_bt"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_down_msg"
+        android:text="download"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_up_msg"
+        android:text="upload"/>
+
+    <com.daimajia.numberprogressbar.NumberProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pb_down_msg"/>
+
+    <com.daimajia.numberprogressbar.NumberProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pb_up_msg"/>
+
+
+</LinearLayout>
