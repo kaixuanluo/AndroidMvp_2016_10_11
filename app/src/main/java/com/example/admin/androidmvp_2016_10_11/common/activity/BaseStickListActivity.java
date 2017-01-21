@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.admin.androidmvp_2016_10_11.R;
+import com.example.admin.androidmvp_2016_10_11.common.adapter.BaseHFAdapter;
 import com.example.admin.androidmvp_2016_10_11.common.module.BaseListModule;
 import com.example.admin.androidmvp_2016_10_11.common.presenter.BaseListPresenter;
 import com.example.admin.androidmvp_2016_10_11.common.requestStatus.BaseListRequestStatus;
@@ -35,7 +36,7 @@ public abstract class BaseStickListActivity<P extends BaseListPresenter<V>,
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
-        mStickAdapter = new StickAdapter();
+        mStickAdapter = new StickAdapter(new BaseListAdapter2());
 
         super.onCreate(savedInstanceState);
 
@@ -66,7 +67,11 @@ public abstract class BaseStickListActivity<P extends BaseListPresenter<V>,
     protected abstract long initStickHeaderId(int position, ITEM item);
     protected abstract void bindStickHeardViewHolder(TextView tvHeard, ITEM item, int position);
 
-    public class StickAdapter extends BaseListAdapter2 implements StickyRecyclerHeadersAdapter<HolderItem> {
+    public class StickAdapter extends BaseHFAdapter implements StickyRecyclerHeadersAdapter<HolderItem> {
+
+        public StickAdapter(Adapter adapter) {
+            super(adapter);
+        }
 
         @Override
         public long getHeaderId(int position) {

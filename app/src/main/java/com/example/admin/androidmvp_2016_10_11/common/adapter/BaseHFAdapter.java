@@ -1,8 +1,10 @@
 package com.example.admin.androidmvp_2016_10_11.common.adapter;
 
 import android.support.v4.util.SparseArrayCompat;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.RecyclerView.ViewHolder;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -61,6 +63,7 @@ public class BaseHFAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         return mFootViews.size();
     }
 
+    private GridLayoutManager.SpanSizeLookup oldLookup;
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
@@ -143,5 +146,57 @@ public class BaseHFAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         public abstract BetterViewHolder onCreateViewHolder(ViewGroup parent);
 
         public abstract void onBindViewHolder(BetterViewHolder holder);
+    }
+
+    //针对Grid的 尾部铺满
+    @Override
+    public void onAttachedToRecyclerView(RecyclerView recyclerView)
+    {
+        mInnerAdapter.onAttachedToRecyclerView(recyclerView);
+        final RecyclerView.LayoutManager layoutManager = recyclerView.getLayoutManager();
+        if (layoutManager instanceof GridLayoutManager)
+        {
+            final GridLayoutManager gridLayoutManager = (GridLayoutManager) layoutManager;
+            final GridLayoutManager.SpanSizeLookup spanSizeLookup = gridLayoutManager.getSpanSizeLookup();
+            gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup()
+            {
+                @Override
+                public int getSpanSize(int position)
+                {
+                    int viewType = getItemViewType(position);
+                    if (mHeaderViews.get(viewType) != null)
+                    {
+                        return ((GridLayoutManager) layoutManager).getSpanCount();
+                    } else if (mFootViews.get(viewType) != null)
+                    {
+                        return ((GridLayoutManager) layoutManager).getSpanCount();
+                    }
+                    if (oldLookup != null)
+                        return oldLookup.getSpanSize(position);
+                    return 1;
+                }
+            });
+            oldLookup = spanSizeLookup;
+            gridLayoutManager.setSpanCount(gridLayoutManager.getSpanCount());
+        }
+    }
+
+    //    针对瀑布流的 //尾部铺满
+    @Override
+    public void onViewAttachedToWindow(RecyclerView.ViewHolder holder)
+    {
+        mInnerAdapter.onViewAttachedToWindow(holder);
+        int position = holder.getLayoutPosition();
+        if (isHeaderViewPos(position) || isFooterViewPos(position))
+        {
+            ViewGroup.LayoutParams lp = holder.itemView.getLayoutParams();
+            if (lp != null
+                    && lp instanceof StaggeredGridLayoutManager.LayoutParams)
+            {
+                StaggeredGridLayoutManager.LayoutParams p =
+                        (StaggeredGridLayoutManager.LayoutParams) lp;
+                p.setFullSpan(true);
+            }
+        }
     }
 }

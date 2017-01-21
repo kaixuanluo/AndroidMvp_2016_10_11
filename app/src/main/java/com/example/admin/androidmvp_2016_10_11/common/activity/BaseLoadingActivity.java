@@ -139,7 +139,9 @@ public abstract class BaseLoadingActivity<P extends BaseLoadingPresenter<V>,
 
     @Override
     public void offLine() {
-        new LoginPresenter(this).login("admin", "21232f297a57a5a743894a0e4a801fc3", new LoadingCallback());
+//        new LoginPresenter(this).login("admin", "21232f297a57a5a743894a0e4a801fc3", new LoadingCallback());
+        new LoginPresenter(this).login("10082",
+                "e10adc3949ba59abbe56e057f20f883e", new LoadingCallback());
     }
 
     //    protected void addLoadingSubscription (Observable observable) {
@@ -150,6 +152,7 @@ public abstract class BaseLoadingActivity<P extends BaseLoadingPresenter<V>,
         @Override
         public void success(DATA data) {
             BaseLoadingActivity.this.success(data);
+            reLoad();
         }
 
         @Override

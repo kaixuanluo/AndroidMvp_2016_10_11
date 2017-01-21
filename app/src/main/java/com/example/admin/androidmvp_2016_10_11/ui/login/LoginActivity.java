@@ -410,8 +410,8 @@ public class LoginActivity extends BaseLoadingActivity<LoginPresenter<BaseLoadin
     public void startLoad() {
         super.startLoad();
 
-        createPresenter().login("admin", "21232f297a57a5a743894a0e4a801fc3", new LoadingCallback());
-//        createPresenter().login("10082", "e10adc3949ba59abbe56e057f20f883e", new LoadingCallback());
+//        createPresenter().login("admin", "21232f297a57a5a743894a0e4a801fc3", new LoadingCallback());
+        createPresenter().login("10082", "e10adc3949ba59abbe56e057f20f883e", new LoadingCallback());
     }
 
     @Override
